@@ -7,10 +7,9 @@ public class movement : MonoBehaviour
     private Rigidbody2D rb;
 
     public bool onGround = true;
-    public float horizontalSpeed = 10f;
-    public float verticalSpeed = 5f;
+    public float speed = 0.0f;
     public int dir = 1;
-    public float verticalInc = 0.1f;
+    public float verticalInc = 5.0f;
 
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -18,9 +17,11 @@ public class movement : MonoBehaviour
         {
             onGround = true;
         }
-        else if (col.gameObject.tag == "wall")
+        
+        if (col.gameObject.tag == "wall")
         {
             dir *= -1;
+            rb.velocity = new Vector2(dir * speed, speed);
         }
     }
 
@@ -35,23 +36,25 @@ public class movement : MonoBehaviour
     {  
         if (Input.GetButton("Jump") && onGround)
         {
-            verticalSpeed += verticalInc;
+            speed += verticalInc;
         }
 
-        if (verticalSpeed >= 30f && onGround)
+        if ((speed >= 30f || Input.GetButtonUp("Jump")) && onGround)
         {
             onGround = false;
-            float tempx = dir * horizontalSpeed;
-            float tempy = verticalSpeed;
-            rb.velocity = new Vector2(tempx, tempy);
+            rb.velocity = new Vector2(dir * speed, speed);
             
             Invoke("ResetJump", 0.2f);
+        }
+
+        if (rb.velocity.magnitude == 0.0f)
+        {
+            onGround = true;
         }
     }
     
     void ResetJump()
     {
-        verticalSpeed = 0.0f;
+        speed = 0.0f;
     }
 }
-
