@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    public LayerMask ground;
     private Rigidbody2D rb;
+
     public bool onGround = true;
     public float horizontalSpeed = 10f;
     public float verticalSpeed = 5f;
@@ -14,7 +14,14 @@ public class movement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        onGround = true;
+        if (col.gameObject.tag == "platform")
+        {
+            onGround = true;
+        }
+        else if (col.gameObject.tag == "wall")
+        {
+            dir *= -1;
+        }
     }
 
     // Start is called before the first frame update
