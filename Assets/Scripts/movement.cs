@@ -8,17 +8,22 @@ public class movement : MonoBehaviour
 
     public bool onGround = true;
     public float speed = 0.0f;
-    public int dir = 1;
-    public float verticalInc = 5.0f;
+    public int dir = -1;
+    public float verticalInc = 1.0f;
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "platform")
+        Collider2D thisObject = col.collider; 
+     
+        Vector3 contactPoint = col.contacts[0].point; // Point at which other collider intersects with this collider
+        Vector3 center = thisObject.bounds.center; // Center point of this collider to use as reference for where player is in relation to this point
+
+        if ((contactPoint.y > center.y) && (col.gameObject.tag == "platform")) // for walls and platform sides
         {
             onGround = true;
         }
-        
-        if (col.gameObject.tag == "wall")
+
+        else // for grounds
         {
             dir *= -1;
             rb.velocity = new Vector2(dir * speed, speed);
@@ -44,7 +49,7 @@ public class movement : MonoBehaviour
             onGround = false;
             rb.velocity = new Vector2(dir * speed, speed);
             
-            Invoke("ResetJump", 0.2f);
+            Invoke("ResetJump", 1.0f);
         }
 
         if (rb.velocity.magnitude == 0.0f)
