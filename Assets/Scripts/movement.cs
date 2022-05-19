@@ -6,8 +6,7 @@ public class movement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D boxCol;
-
-    public PhysicsMaterial2D bounceMat, normalMat;
+    Vector2 prevVelocity;
 
     [SerializeField] private LayerMask platform;
 
@@ -15,27 +14,19 @@ public class movement : MonoBehaviour
     public float charge;
     public float chargeRate;
 
-    // void OnCollisionEnter2D(Collision2D col)
-    // {
-    //     if (isWall())
-    //     {
-            
-    //     }
-        //     Collider2D thisObject = col.collider;
 
-        //     Vector3 contactPoint = col.contacts[0].point; // Point at which other collider intersects with this collider
-        //     Vector3 center = thisObject.bounds.center; // Center point of this collider to use as reference for where player is in relation to this point
 
-        //     if ((contactPoint.y > center.y) && (col.gameObject.tag == "platform")) // for walls and platform sides
-        //     {
-        //         onGround = true;
-        //     }
-        //     else // for grounds
-        //     {
-        //         dir *= -1;
-        //         rb.velocity = new Vector2(dir * speed, speed);
-        //     }
-    // }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.contacts[0].normal.x != 0)
+        {
+            dir = collision.contacts[0].normal.x;
+
+            var speed = prevVelocity.magnitude;
+            var direction = Vector2.Reflect(prevVelocity.normalized, collision.contacts[0].normal);
+            rb.velocity = 0.5f * direction * Mathf.Max(speed, 0f);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +38,8 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        prevVelocity = rb.velocity;
+
         if (Input.GetButton("Jump") && isGround())
         {
             charge += chargeRate;
@@ -58,42 +51,10 @@ public class movement : MonoBehaviour
 
             charge = 0.0f;
         }
-
-        if (!isGround() && isWall())
-        {
-            dir *= -1;
-            rb.sharedMaterial = bounceMat;
-        }
-        else
-        {
-            rb.sharedMaterial = normalMat;
-        }
     }
 
     private bool isGround()
     {
         return Physics2D.BoxCast(boxCol.bounds.center, boxCol.bounds.size, 0f, Vector2.down, 0.1f, platform);
-    }
-
-    private bool isWall()
-    {
-        return Physics2D.BoxCast(boxCol.bounds.center, boxCol.bounds.size, 0f, Vector2.left, 0.01f, platform) || Physics2D.BoxCast(boxCol.bounds.center, boxCol.bounds.size, 0f, Vector2.right, 0.01f, platform);
-
-        // // 1
-        // bool wallOnleft = Physics2D.Raycast(new Vector2(
-        // transform.position.x - width, transform.position.y),
-        // -Vector2.right, rayCastLengthCheck);
-        // bool wallOnRight = Physics2D.Raycast(new Vector2(
-        // transform.position.x + width, transform.position.y),
-        // Vector2.right, rayCastLengthCheck);
-        // // 2
-        // if (wallOnleft || wallOnRight)
-        // {
-        //     return true;
-        // }
-        // else
-        // {
-        //     return false;
-        // }
     }
 }
