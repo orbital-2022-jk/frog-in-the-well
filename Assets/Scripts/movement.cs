@@ -7,14 +7,14 @@ public class movement : MonoBehaviour
     private Rigidbody2D rb;
 
     public bool onGround = true;
-    public float speed = 0.0f;
-    public int dir = -1;
-    public float verticalInc = 1.0f;
+    public float speed;
+    public int dir;
+    public float verticalInc;
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Collider2D thisObject = col.collider; 
-     
+        Collider2D thisObject = col.collider;
+
         Vector3 contactPoint = col.contacts[0].point; // Point at which other collider intersects with this collider
         Vector3 center = thisObject.bounds.center; // Center point of this collider to use as reference for where player is in relation to this point
 
@@ -22,7 +22,6 @@ public class movement : MonoBehaviour
         {
             onGround = true;
         }
-
         else // for grounds
         {
             dir *= -1;
@@ -38,7 +37,7 @@ public class movement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {  
+    {
         if (Input.GetButton("Jump") && onGround)
         {
             speed += verticalInc;
@@ -48,7 +47,7 @@ public class movement : MonoBehaviour
         {
             onGround = false;
             rb.velocity = new Vector2(dir * speed, speed);
-            
+
             Invoke("ResetJump", 1.0f);
         }
 
@@ -57,7 +56,7 @@ public class movement : MonoBehaviour
             onGround = true;
         }
     }
-    
+
     void ResetJump()
     {
         speed = 0.0f;
