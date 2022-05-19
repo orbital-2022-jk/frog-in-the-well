@@ -365,6 +365,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9012496421584356732, guid: 1bd59b25f2fa11f41a0ec96733f560ee, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd59b25f2fa11f41a0ec96733f560ee, type: 3}
 --- !u!1001 &1197713443
@@ -425,6 +429,10 @@ PrefabInstance:
     - target: {fileID: 3848386031093500416, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027037252105489939, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6041796969536862558, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
       propertyPath: m_Name
@@ -798,7 +806,7 @@ PrefabInstance:
     - target: {fileID: 5027037252105489939, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: bdebee44304eb814ebdf1d0aa8dafe0e, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6041796969536862558, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
       propertyPath: m_Name
       value: platform
@@ -934,10 +942,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f51cf6b8a41bdf4b9899859876f35ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onGround: 1
-  speed: 0
+  bounceMat: {fileID: 6200000, guid: f9ad367604c9a6c4ea9320a564b0adea, type: 2}
+  normalMat: {fileID: 6200000, guid: bdebee44304eb814ebdf1d0aa8dafe0e, type: 2}
+  platform:
+    serializedVersion: 2
+    m_Bits: 128
   dir: 1
-  verticalInc: 1
+  charge: 0
+  chargeRate: 0.1
 --- !u!1001 &9221699155340232661
 PrefabInstance:
   m_ObjectHideFlags: 0
