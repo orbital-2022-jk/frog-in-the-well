@@ -5,16 +5,16 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private BoxCollider2D boxCol;
+    private CircleCollider2D circCol;
     Vector2 prevVelocity;
+    private float width;
+    private float height;
 
     [SerializeField] private LayerMask platform;
 
     public float dir;
     public float charge;
     public float chargeRate;
-
-
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -26,13 +26,20 @@ public class movement : MonoBehaviour
             var direction = Vector2.Reflect(prevVelocity.normalized, collision.contacts[0].normal);
             rb.velocity = 0.5f * direction * Mathf.Max(speed, 0f);
         }
+
+        if (isGround())
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        boxCol = GetComponent<BoxCollider2D>();
+        circCol = GetComponent<CircleCollider2D>();
+        width = GetComponent<CircleCollider2D>().bounds.extents.x + 0.1f;
+        height = GetComponent<CircleCollider2D>().bounds.extents.y + 0.1f;
     }
 
     // Update is called once per frame
@@ -45,8 +52,13 @@ public class movement : MonoBehaviour
             charge += chargeRate;
         }
 
-        if ((charge >= 30f || Input.GetButtonUp("Jump")) && isGround())
+        if ((charge >= 20f || Input.GetButtonUp("Jump")) && isGround())
         {
+            if (Mathf.RoundToInt(dir) != 0)
+            {
+                dir = Mathf.RoundToInt(dir);
+            }
+
             rb.velocity = new Vector2(dir * charge, charge);
 
             charge = 0.0f;
@@ -55,6 +67,7 @@ public class movement : MonoBehaviour
 
     private bool isGround()
     {
-        return Physics2D.BoxCast(boxCol.bounds.center, boxCol.bounds.size, 0f, Vector2.down, 0.1f, platform);
+        // return Physics2D.BoxCast(circCol.bounds.center, circCol.bounds.size * 0.3f, 0f, Vector2.down, 0.5f, platform);
+        return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), -Vector2.up, 0.005f);
     }
 }
