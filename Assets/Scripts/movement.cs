@@ -10,7 +10,7 @@ public class movement : MonoBehaviour
     private float width;
     private float height;
     private float ray_cast_length = 0.005f;
-    private float collision_threshold = 0.8f;
+    private float collision_threshold = 0.3f;
 
     public float dir;
     public float charge;
@@ -18,8 +18,8 @@ public class movement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Debug.Log(collision.contacts[0].point);
-        // Debug.Log(rb.transform.position);
+        Debug.Log(collision.contacts[0].point);
+        Debug.Log(rb.transform.position);
 
         var col_x = collision.contacts[0].point.x;
         var col_y = collision.contacts[0].point.y;
@@ -29,15 +29,14 @@ public class movement : MonoBehaviour
         // contact down
         if (col_y + collision_threshold < curr_y)
         {
-            Debug.Log(col_y);
-            Debug.Log(col_y + collision_threshold);
-            Debug.Log(curr_y);
             rb.velocity = new Vector2(0, 0);
         }
         // contact up
         else if (col_y - collision_threshold > curr_y)
         {
-
+            var speed = prev_velocity.magnitude;
+            var direction = Vector2.Reflect(prev_velocity.normalized, collision.contacts[0].normal);
+            rb.velocity = 0.5f * direction * Mathf.Max(speed, 0f);
         }
         else
         {
@@ -84,7 +83,6 @@ public class movement : MonoBehaviour
 
         if ((charge >= 20f || Input.GetButtonUp("Jump")) && isGround())
         {
-
             rb.velocity = new Vector2(dir * charge, 1.1f * charge);
 
             charge = 0.0f;
@@ -94,8 +92,6 @@ public class movement : MonoBehaviour
     private bool isGround()
     {
         // return Physics2D.BoxCast(circ_col.bounds.center, circ_col.bounds.size * 0.3f, 0f, Vector2.down, 0.5f, platform);
-        // return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, 0.0005f);
-
         bool left = Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
         bool mid = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, ray_cast_length);
         bool right = Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
