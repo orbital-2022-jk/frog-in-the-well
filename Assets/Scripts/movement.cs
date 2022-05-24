@@ -5,38 +5,56 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private CircleCollider2D circCol;
-    Vector2 prevVelocity;
+    private CircleCollider2D circ_col;
+    Vector2 prev_velocity;
     private float width;
     private float height;
+    private float ray_cast_length = 0.005f;
+    private float collision_threshold = 0.8f;
 
     public float dir;
     public float charge;
-    public float chargeRate;
+    public float charge_rate;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isLeftWall()) 
-        { 
-            dir = 1; 
-        } 
-        else if (isRightWall()) 
-        { 
-            dir = -1; 
-        }
+        // Debug.Log(collision.contacts[0].point);
+        // Debug.Log(rb.transform.position);
 
-        if (collision.contacts[0].normal.x != 0)
+        var col_x = collision.contacts[0].point.x;
+        var col_y = collision.contacts[0].point.y;
+        var curr_x = rb.transform.position.x;
+        var curr_y = rb.transform.position.y;
+
+        // contact down
+        if (col_y + collision_threshold < curr_y)
         {
-            // dir = collision.contacts[0].normal.x;
-
-            var speed = prevVelocity.magnitude;
-            var direction = Vector2.Reflect(prevVelocity.normalized, collision.contacts[0].normal);
-            rb.velocity = 0.5f * direction * Mathf.Max(speed, 0f);
-        }
-
-        if (isGround())
-        {
+            Debug.Log(col_y);
+            Debug.Log(col_y + collision_threshold);
+            Debug.Log(curr_y);
             rb.velocity = new Vector2(0, 0);
+        }
+        // contact up
+        else if (col_y - collision_threshold > curr_y)
+        {
+
+        }
+        else
+        {
+            // contact left
+            if (col_x + collision_threshold < curr_x)
+            {
+                dir = 1;
+            }
+            // contact right
+            else if (col_x - collision_threshold > curr_x)
+            {
+                dir = -1;
+            }
+
+            var speed = prev_velocity.magnitude;
+            var direction = Vector2.Reflect(prev_velocity.normalized, collision.contacts[0].normal);
+            rb.velocity = 0.5f * direction * Mathf.Max(speed, 0f);
         }
 
         if (collision.gameObject.tag == "ceiling")
@@ -49,7 +67,7 @@ public class movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        circCol = GetComponent<CircleCollider2D>();
+        circ_col = GetComponent<CircleCollider2D>();
         width = GetComponent<CircleCollider2D>().bounds.extents.x + 0.1f;
         height = GetComponent<CircleCollider2D>().bounds.extents.y + 0.1f;
     }
@@ -57,11 +75,11 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        prevVelocity = rb.velocity;
+        prev_velocity = rb.velocity;
 
         if (Input.GetButton("Jump") && isGround())
         {
-            charge += chargeRate;
+            charge += charge_rate;
         }
 
         if ((charge >= 20f || Input.GetButtonUp("Jump")) && isGround())
@@ -71,23 +89,21 @@ public class movement : MonoBehaviour
 
             charge = 0.0f;
         }
-        Debug.Log(transform.right);
     }
 
     private bool isGround()
     {
+        // return Physics2D.BoxCast(circ_col.bounds.center, circ_col.bounds.size * 0.3f, 0f, Vector2.down, 0.5f, platform);
+        // return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, 0.0005f);
 
-        // return Physics2D.BoxCast(circCol.bounds.center, circCol.bounds.size * 0.3f, 0f, Vector2.down, 0.5f, platform);
-        return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), -Vector2.up, 0.005f);
-    }
+        bool left = Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
+        bool mid = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, ray_cast_length);
+        bool right = Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
 
-    private bool isLeftWall() 
-    { 
-        return Physics2D.Raycast(new Vector2(transform.position.x - width / 2, transform.position.y), Vector2.left, 0.005f); 
-    } 
- 
-    private bool isRightWall() 
-    { 
-        return Physics2D.Raycast(new Vector2(transform.position.x + width / 2, transform.position.y), Vector2.right, 0.005f); 
+        if (left || mid || right)
+        {
+            return true;
+        }
+        return false;
     }
 }
