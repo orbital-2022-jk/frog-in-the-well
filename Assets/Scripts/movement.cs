@@ -10,8 +10,6 @@ public class movement : MonoBehaviour
     private float width;
     private float height;
 
-    [SerializeField] private LayerMask platform;
-
     public float dir;
     public float charge;
     public float chargeRate;
@@ -30,6 +28,11 @@ public class movement : MonoBehaviour
         if (isGround())
         {
             rb.velocity = new Vector2(0, 0);
+        }
+
+        if (collision.gameObject.tag == "ceiling")
+        {
+            Debug.Log("game over");
         }
     }
 
