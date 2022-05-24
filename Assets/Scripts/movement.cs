@@ -16,9 +16,18 @@ public class movement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isLeftWall()) 
+        { 
+            dir = 1; 
+        } 
+        else if (isRightWall()) 
+        { 
+            dir = -1; 
+        }
+
         if (collision.contacts[0].normal.x != 0)
         {
-            dir = collision.contacts[0].normal.x;
+            // dir = collision.contacts[0].normal.x;
 
             var speed = prevVelocity.magnitude;
             var direction = Vector2.Reflect(prevVelocity.normalized, collision.contacts[0].normal);
@@ -57,20 +66,28 @@ public class movement : MonoBehaviour
 
         if ((charge >= 20f || Input.GetButtonUp("Jump")) && isGround())
         {
-            if (Mathf.RoundToInt(dir) != 0)
-            {
-                dir = Mathf.RoundToInt(dir);
-            }
 
-            rb.velocity = new Vector2(dir * charge, charge);
+            rb.velocity = new Vector2(dir * charge, 1.1f * charge);
 
             charge = 0.0f;
         }
+        Debug.Log(transform.right);
     }
 
     private bool isGround()
     {
+
         // return Physics2D.BoxCast(circCol.bounds.center, circCol.bounds.size * 0.3f, 0f, Vector2.down, 0.5f, platform);
         return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), -Vector2.up, 0.005f);
+    }
+
+    private bool isLeftWall() 
+    { 
+        return Physics2D.Raycast(new Vector2(transform.position.x - width / 2, transform.position.y), Vector2.left, 0.005f); 
+    } 
+ 
+    private bool isRightWall() 
+    { 
+        return Physics2D.Raycast(new Vector2(transform.position.x + width / 2, transform.position.y), Vector2.right, 0.005f); 
     }
 }
