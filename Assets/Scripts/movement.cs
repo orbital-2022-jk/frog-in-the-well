@@ -87,6 +87,18 @@ public class movement : MonoBehaviour
 
             charge = 0.0f;
         }
+
+        if (isGround())
+        {
+            if (isLeftWall())
+            {
+                dir = 1;
+            }
+            else if (isRightWall())
+            {
+                dir = -1;
+            }
+        }
     }
 
     private bool isGround()
@@ -101,5 +113,15 @@ public class movement : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    private bool isLeftWall()
+    {
+        return Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.05f), transform.position.y), Vector2.left, ray_cast_length);
+    }
+
+    private bool isRightWall()
+    {
+        return Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.05f), transform.position.y), Vector2.right, ray_cast_length);
     }
 }
