@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject game_over_ui;
+
     bool game_over = false;
 
     public void EndGame()
@@ -13,8 +15,15 @@ public class GameManager : MonoBehaviour
         {
             game_over = true;
 
-            Invoke("RestartGame", 2f);
+            Invoke("GameOver", 2f);
+
+            Invoke("RestartGame", 5f);
         }
+    }
+
+    public void GameOver()
+    {
+        game_over_ui.SetActive(true);
     }
 
     public void RestartGame()
