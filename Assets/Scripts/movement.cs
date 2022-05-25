@@ -18,8 +18,8 @@ public class movement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.contacts[0].point);
-        Debug.Log(rb.transform.position);
+        // Debug.Log(collision.contacts[0].point);
+        // Debug.Log(rb.transform.position);
 
         var col_x = collision.contacts[0].point.x;
         var col_y = collision.contacts[0].point.y;
@@ -55,10 +55,13 @@ public class movement : MonoBehaviour
             var direction = Vector2.Reflect(prev_velocity.normalized, collision.contacts[0].normal);
             rb.velocity = 0.5f * direction * Mathf.Max(speed, 0f);
         }
+    }
 
-        if (collision.gameObject.tag == "ceiling")
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "ceiling")
         {
-            Debug.Log("game over");
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 
