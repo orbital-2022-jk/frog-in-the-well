@@ -798,7 +798,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ground_and_stone_4_30: -1182549268
       ground_and_stone_4_18: -1042791490
       ground_and_stone_4_25: 734888628
       ground_and_stone_4_6: -2018810049
@@ -823,11 +822,12 @@ TextureImporter:
       ground_and_stone_4_31: -1972647097
       ground_and_stone_4_12: -1439973566
       ground_and_stone_4_22: 1013596602
+      ground_and_stone_4_30: -1182549268
       ground_and_stone_4_5: 845518705
       ground_and_stone_4_8: -1597384933
       ground_and_stone_4_10: 338597224
-      ground_and_stone_4_20: 1586422445
       ground_and_stone_4_13: 881299599
+      ground_and_stone_4_20: 1586422445
       ground_and_stone_4_3: 625411682
       ground_and_stone_4_26: 520343591
   spritePackingTag: 

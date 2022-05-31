@@ -882,12 +882,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pipes_and_scenery_1_11: 7205974
+      pipes_and_scenery_1_13: -2044138936
       pipes_and_scenery_1_27: -96571929
-      pipes_and_scenery_1_16: -1737588946
       pipes_and_scenery_1_19: 1320111092
       pipes_and_scenery_1_29: -1203488861
-      pipes_and_scenery_1_21: 862071026
+      pipes_and_scenery_1_16: -1737588946
       pipes_and_scenery_1_35: -909380777
       pipes_and_scenery_1_5: -791795269
       pipes_and_scenery_1_6: -687868011
@@ -913,11 +912,12 @@ TextureImporter:
       pipes_and_scenery_1_31: 1404115540
       pipes_and_scenery_1_14: -1496861793
       pipes_and_scenery_1_12: 1843055995
+      pipes_and_scenery_1_11: 7205974
       pipes_and_scenery_1_3: 1715806557
       pipes_and_scenery_1_8: 990032543
       pipes_and_scenery_1_0: -229655800
       pipes_and_scenery_1_2: 1966736292
-      pipes_and_scenery_1_13: -2044138936
+      pipes_and_scenery_1_21: 862071026
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

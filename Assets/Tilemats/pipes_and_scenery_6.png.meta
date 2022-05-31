@@ -887,7 +887,6 @@ TextureImporter:
       pipes_and_scenery_6_13: -2013201357
       pipes_and_scenery_6_30: -1837483379
       pipes_and_scenery_6_17: 1648805475
-      pipes_and_scenery_6_32: 2054175920
       pipes_and_scenery_6_35: -593860032
       pipes_and_scenery_6_18: 548763917
       pipes_and_scenery_6_8: 1436892485
@@ -914,10 +913,11 @@ TextureImporter:
       pipes_and_scenery_6_20: -1556762360
       pipes_and_scenery_6_16: 451109192
       pipes_and_scenery_6_27: -28977843
+      pipes_and_scenery_6_32: 2054175920
       pipes_and_scenery_6_28: 433589628
       pipes_and_scenery_6_5: -343142613
-      pipes_and_scenery_6_22: 530978662
       pipes_and_scenery_6_31: -2015749205
+      pipes_and_scenery_6_22: 530978662
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
