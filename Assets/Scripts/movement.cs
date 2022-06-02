@@ -36,7 +36,7 @@ public class movement : MonoBehaviour
         {
             var speed = prev_velocity.magnitude;
             var direction = Vector2.Reflect(prev_velocity.normalized, collision.contacts[0].normal);
-            rb.velocity = 0.5f * direction * Mathf.Max(speed, 0f);
+            rb.velocity = 0.8f * direction * Mathf.Max(speed, 0f);
         }
         else
         {
@@ -53,7 +53,7 @@ public class movement : MonoBehaviour
 
             var speed = prev_velocity.magnitude;
             var direction = Vector2.Reflect(prev_velocity.normalized, collision.contacts[0].normal);
-            rb.velocity = 0.5f * direction * Mathf.Max(speed, 0f);
+            rb.velocity = 0.8f * direction * Mathf.Max(speed, 0f);
         }
     }
 
