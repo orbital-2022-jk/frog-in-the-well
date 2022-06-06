@@ -10,8 +10,9 @@ public class movement : MonoBehaviour
     private float width;
     private float height;
     private float ray_cast_length = 0.005f;
-    private float collision_threshold = 0.3f;
+    private float collision_threshold = 0.5f;
 
+    public PhysicsMaterial2D bouncy_material, normal_material;
     public float dir;
     public float charge;
     public float charge_rate;
@@ -34,9 +35,9 @@ public class movement : MonoBehaviour
         // contact up
         else if (col_y - collision_threshold > curr_y)
         {
-            var speed = prev_velocity.magnitude;
-            var direction = Vector2.Reflect(prev_velocity.normalized, collision.contacts[0].normal);
-            rb.velocity = 0.8f * direction * Mathf.Max(speed, 0f);
+            // var speed = prev_velocity.magnitude;
+            // var direction = Vector2.Reflect(prev_velocity.normalized, collision.contacts[0].normal);
+            // rb.velocity = 0.8f * direction * Mathf.Max(speed, 0f);
         }
         else
         {
@@ -51,9 +52,14 @@ public class movement : MonoBehaviour
                 dir = -1;
             }
 
-            var speed = prev_velocity.magnitude;
-            var direction = Vector2.Reflect(prev_velocity.normalized, collision.contacts[0].normal);
-            rb.velocity = 0.8f * direction * Mathf.Max(speed, 0f);
+            // var speed = prev_velocity.magnitude;
+            // var direction = Vector2.Reflect(prev_velocity.normalized, collision.contacts[0].normal);
+            // rb.velocity = 0.8f * direction * Mathf.Max(speed, 0f);
+        }
+
+        if (isGround())
+        {
+            rb.sharedMaterial = normal_material;
         }
     }
 
@@ -86,9 +92,11 @@ public class movement : MonoBehaviour
 
         if ((charge >= 20f || Input.GetButtonUp("Jump")) && isGround())
         {
-            rb.velocity = new Vector2(dir * charge, 1.1f * charge);
+            rb.velocity = new Vector2(dir * charge, 1.2f * charge);
 
-            charge = 0.0f;
+            charge = 1.0f;
+
+            rb.sharedMaterial = bouncy_material;
         }
 
         if (isGround())
@@ -107,15 +115,16 @@ public class movement : MonoBehaviour
     private bool isGround()
     {
         // return Physics2D.BoxCast(circ_col.bounds.center, circ_col.bounds.size * 0.3f, 0f, Vector2.down, 0.5f, platform);
-        bool left = Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
-        bool mid = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, ray_cast_length);
-        bool right = Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
+        return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, ray_cast_length);
+        // bool left = Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
+        // bool mid = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, ray_cast_length);
+        // bool right = Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
 
-        if (left || mid || right)
-        {
-            return true;
-        }
-        return false;
+        // if (left || mid || right)
+        // {
+        //     return true;
+        // }
+        // return false;
     }
 
     private bool isLeftWall()
