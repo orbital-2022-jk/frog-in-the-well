@@ -19,6 +19,10 @@ public class movement : MonoBehaviour
     public float jump_height;
     public float bounce_boost;
 
+    public GameObject PointPrefab;
+    public GameObject[] points;
+    public int num_points;
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Debug.Log(collision.contacts[0].point);
@@ -87,6 +91,14 @@ public class movement : MonoBehaviour
         circ_col = GetComponent<CircleCollider2D>();
         width = GetComponent<CircleCollider2D>().bounds.extents.x + 0.1f;
         height = GetComponent<CircleCollider2D>().bounds.extents.y + 0.1f;
+
+        // points
+        points = new GameObject[num_points];
+
+        for (int i = 0; i < num_points; i++)
+        {
+            points[i] = Instantiate(PointPrefab, transform.position, Quaternion.identity);
+        }
     }
 
     // Update is called once per frame
@@ -116,6 +128,11 @@ public class movement : MonoBehaviour
         {
             dir = -1;
         }
+
+        for (int i = 0; i < num_points; i++)
+        {
+            points[i].transform.position = pointPos(i * 0.1f, charge);
+        }
     }
 
     private bool isGround()
@@ -141,5 +158,12 @@ public class movement : MonoBehaviour
     private bool isRightWall()
     {
         return Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.05f), transform.position.y), Vector2.right, ray_cast_length);
+    }
+
+    Vector2 pointPos(float t, float charge)
+    {
+        Vector2 curr_point_pos = (Vector2)transform.position + (new Vector2(dir * charge, jump_height * charge) * t) + 0.5f * rb.gravityScale * Physics2D.gravity * (t * t);
+
+        return curr_point_pos;
     }
 }
