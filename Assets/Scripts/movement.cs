@@ -50,16 +50,16 @@ public class movement : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(-prev_velocity.x, bounce_boost * prev_velocity.y);
-            // // contact left
-            // if (col_x + collision_threshold < curr_x)
-            // {
-            //     dir = 1;
-            // }
-            // // contact right
-            // else if (col_x - collision_threshold > curr_x)
-            // {
-            //     dir = -1;
-            // }
+            // contact left
+            if (col_x + collision_threshold < curr_x)
+            {
+                dir = 1;
+            }
+            // contact right
+            else if (col_x - collision_threshold > curr_x)
+            {
+                dir = -1;
+            }
 
             // // var speed = prev_velocity.magnitude;
             // // var direction = Vector2.Reflect(prev_velocity.normalized, collision.contacts[0].normal);
