@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movement : MonoBehaviour
+public class PlayerControls : MonoBehaviour
 {
     private Rigidbody2D rb;
     private CircleCollider2D circ_col;
@@ -22,6 +22,20 @@ public class movement : MonoBehaviour
     public GameObject PointPrefab;
     public GameObject[] points;
     public int num_points;
+
+    public bool paused = false;
+
+    void Pause()
+    {
+        if (paused)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -104,34 +118,43 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        prev_velocity = rb.velocity;
-
-        if (Input.GetButton("Jump") && isGround())
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            charge += charge_rate;
+            paused = !paused;
+            Pause();
         }
 
-        if ((charge >= 20f || Input.GetButtonUp("Jump")) && isGround())
+        if (!paused)
         {
-            rb.velocity = new Vector2(dir * charge, jump_height * charge);
+            prev_velocity = rb.velocity;
 
-            charge = 1.0f;
+            if (Input.GetButton("Jump") && isGround())
+            {
+                charge += charge_rate;
+            }
 
-            rb.sharedMaterial = bouncy_material;
-        }
+            if ((charge >= 20f || Input.GetButtonUp("Jump")) && isGround())
+            {
+                rb.velocity = new Vector2(dir * charge, jump_height * charge);
 
-        if (isLeftWall())
-        {
-            dir = 1;
-        }
-        else if (isRightWall())
-        {
-            dir = -1;
-        }
+                charge = 1.0f;
 
-        for (int i = 0; i < num_points; i++)
-        {
-            points[i].transform.position = pointPos(i * 0.1f, charge);
+                rb.sharedMaterial = bouncy_material;
+            }
+
+            if (isLeftWall())
+            {
+                dir = 1;
+            }
+            else if (isRightWall())
+            {
+                dir = -1;
+            }
+
+            for (int i = 0; i < num_points; i++)
+            {
+                points[i].transform.position = pointPos(i * 0.1f, charge);
+            }
         }
     }
 
