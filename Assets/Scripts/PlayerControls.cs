@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -30,10 +31,13 @@ public class PlayerControls : MonoBehaviour
         if (paused)
         {
             Time.timeScale = 0f;
+            DontDestroyOnLoad(this.gameObject);
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else
         {
             Time.timeScale = 1;
+            // SceneManager.MoveGameObjectToScene(this.gameObject, SceneManager.GetActiveScene());
         }
     }
 
