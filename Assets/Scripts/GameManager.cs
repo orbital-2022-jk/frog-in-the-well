@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject game_over_ui;
-
     bool game_over = false;
 
     public void EndGame()
@@ -15,31 +13,12 @@ public class GameManager : MonoBehaviour
         {
             game_over = true;
 
-            Invoke("GameOver", 2f);
-
-            Invoke("RestartGame", 5f);
+            Invoke("GameOver", 1f);
         }
     }
 
     public void GameOver()
     {
-        game_over_ui.SetActive(true);
-    }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene("Game");
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
