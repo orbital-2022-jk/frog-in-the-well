@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
+    public Slider slider;
 
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("volume", volume);
-        Debug.Log(volume);
     }
 
     public void GoToMainMenu()
@@ -19,15 +20,14 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        // audioMixer = GetComponent<AudioMixer>();
+        slider = GetComponent<Slider>();
+        float curr_volume;
+        audioMixer.GetFloat("volume", out curr_volume);
+        Debug.Log(curr_volume);
+        SetVolume(curr_volume);
+        slider.value = curr_volume;
     }
 }

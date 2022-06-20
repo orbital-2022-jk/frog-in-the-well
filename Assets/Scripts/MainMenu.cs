@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    PlayerControls player_controls;
+    private PlayerControls player_controls;
 
     public void PlayGame()
     {
