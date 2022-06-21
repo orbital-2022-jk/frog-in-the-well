@@ -34,20 +34,14 @@ public class AudioManager : MonoBehaviour
             soundEffectsFloat = PlayerPrefs.GetFloat(SoundEffectsPref);
             soundEffectsSlider.value = soundEffectsFloat;
         }
+
+        UpdateSound();
     }
 
     public void SaveSoundSettings()
     {
         PlayerPrefs.SetFloat(BackgroundPref, backgroundSlider.value);
         PlayerPrefs.SetFloat(SoundEffectsPref, soundEffectsSlider.value);
-    }
-
-    void OnApplicationFocus(bool inFocus)
-    {
-        if (!inFocus)
-        {
-            SaveSoundSettings();
-        }
     }
 
     public void UpdateSound()
@@ -57,6 +51,14 @@ public class AudioManager : MonoBehaviour
         for (int i = 0; i < soundEffectsAudio.Length; i++)
         {
             soundEffectsAudio[i].volume = soundEffectsSlider.value;
+        }
+    }
+
+    void OnApplicationFocus(bool inFocus)
+    {
+        if (!inFocus)
+        {
+            SaveSoundSettings();
         }
     }
 }

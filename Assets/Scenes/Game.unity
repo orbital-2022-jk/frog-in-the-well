@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 53230478}
   - component: {fileID: 53230480}
   - component: {fileID: 53230479}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3092,7 +3092,7 @@ GameObject:
   - component: {fileID: 198557538}
   - component: {fileID: 198557540}
   - component: {fileID: 198557539}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4728,7 +4728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297464575}
   - component: {fileID: 297464576}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4802,15 +4802,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 436599583}
   m_HandleRect: {fileID: 1840865252}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2059346339}
-        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: UpdateSound
         m_Mode: 1
         m_Arguments:
@@ -7042,7 +7042,7 @@ GameObject:
   - component: {fileID: 436599583}
   - component: {fileID: 436599585}
   - component: {fileID: 436599584}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7065,7 +7065,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9120,7 +9120,7 @@ GameObject:
   - component: {fileID: 562775680}
   - component: {fileID: 562775679}
   - component: {fileID: 562775678}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9205,7 +9205,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2059346339}
-        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: SaveSoundSettings
         m_Mode: 1
         m_Arguments:
@@ -10070,7 +10070,7 @@ GameObject:
   - component: {fileID: 617756381}
   - component: {fileID: 617756383}
   - component: {fileID: 617756382}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14465,7 +14465,7 @@ GameObject:
   - component: {fileID: 832433122}
   - component: {fileID: 832433121}
   - component: {fileID: 832433120}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14531,7 +14531,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &832433123
 RectTransform:
@@ -19848,7 +19848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1142438035}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22175,7 +22175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1271348955}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22419,7 +22419,7 @@ GameObject:
   - component: {fileID: 1304330728}
   - component: {fileID: 1304330730}
   - component: {fileID: 1304330729}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: GamePaused
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23255,7 +23255,7 @@ AudioSource:
   m_GameObject: {fileID: 1346893749}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c6e5f44f16df6c6458f1df4a7d2251e0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6c290dc10994b1342b069d1f80ff9fd6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -29159,7 +29159,7 @@ GameObject:
   - component: {fileID: 1677275574}
   - component: {fileID: 1677275576}
   - component: {fileID: 1677275575}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31351,7 +31351,7 @@ GameObject:
   - component: {fileID: 1840865252}
   - component: {fileID: 1840865254}
   - component: {fileID: 1840865253}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31373,8 +31373,8 @@ RectTransform:
   m_Father: {fileID: 1271348955}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -34993,7 +34993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020551259}
   - component: {fileID: 2020551260}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35798,7 +35798,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2059346337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc9736f7fe01d094489c78175fb5dded, type: 3}
+  m_Script: {fileID: 11500000, guid: dfe0d05dce75d1e4d892511358096c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 297464576}
@@ -61932,7 +61932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7656745261972658066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 101.46, y: 102.02, z: -1.2021443}
+  m_LocalPosition: {x: 3.5, y: 1.5, z: -1.2021443}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61960,6 +61960,7 @@ MonoBehaviour:
   bounce_boost: 0.8
   paused: 0
   pause_menu: {fileID: 832433119}
+  audio_manager: {fileID: 2059346339}
   PointPrefab: {fileID: 716461612344392760, guid: bff91f93ef4f90643a1f0f3500a6c203, type: 3}
   points: []
   num_points: 15

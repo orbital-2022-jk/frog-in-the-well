@@ -22,6 +22,7 @@ public class PlayerControls : MonoBehaviour
 
     public bool paused = false;
     public GameObject pause_menu;
+    public AudioManager audio_manager;
 
     public GameObject PointPrefab;
     public GameObject[] points;
@@ -38,6 +39,7 @@ public class PlayerControls : MonoBehaviour
         {
             Time.timeScale = 1;
             pause_menu.SetActive(false);
+            audio_manager.SaveSoundSettings();
         }
     }
 
@@ -117,6 +119,10 @@ public class PlayerControls : MonoBehaviour
         {
             points[i] = Instantiate(PointPrefab, transform.position, Quaternion.identity);
         }
+
+        // fix bug for camera not lerp to player when click main menu from pause menu
+        Pause();
+        Pause();
     }
 
     // Update is called once per frame
