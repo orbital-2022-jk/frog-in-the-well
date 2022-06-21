@@ -20,24 +20,24 @@ public class PlayerControls : MonoBehaviour
     public float jump_height;
     public float bounce_boost;
 
+    public bool paused = false;
+    public GameObject pause_menu;
+
     public GameObject PointPrefab;
     public GameObject[] points;
     public int num_points;
-
-    public bool paused = false;
 
     void Pause()
     {
         if (paused)
         {
             Time.timeScale = 0f;
-            DontDestroyOnLoad(this.gameObject);
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            pause_menu.SetActive(true);
         }
         else
         {
             Time.timeScale = 1;
-            // SceneManager.MoveGameObjectToScene(this.gameObject, SceneManager.GetActiveScene());
+            pause_menu.SetActive(false);
         }
     }
 
