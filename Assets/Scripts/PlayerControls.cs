@@ -96,14 +96,6 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.tag == "ceiling")
-        {
-            FindObjectOfType<GameManager>().EndGame();
-        }
-    }
-
     // Start is called before the first frame update
     void Start()
     {
