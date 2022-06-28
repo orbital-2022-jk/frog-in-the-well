@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StarSystem : MonoBehaviour
+public class FinalStars : MonoBehaviour
 {
     private static readonly string star_1 = "star_1";
     private static readonly string star_2 = "star_2";
@@ -22,54 +22,39 @@ public class StarSystem : MonoBehaviour
     public Image star_4_empty;
     public Image star_5_empty;
 
-    private bool star_1_active = false;
-    private bool star_2_active = false;
-    private bool star_3_active = false;
-    private bool star_4_active = false;
-    private bool star_5_active = false;
-
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt(star_1, 0);
-        PlayerPrefs.SetInt(star_2, 0);
-        PlayerPrefs.SetInt(star_3, 0);
-        PlayerPrefs.SetInt(star_4, 0);
-        PlayerPrefs.SetInt(star_5, 0);
+        if (PlayerPrefs.GetInt(star_1) == 1)
+        {
+            star_1_img.gameObject.SetActive(true);
+            star_1_empty.gameObject.SetActive(false);
+        }
+        if (PlayerPrefs.GetInt(star_2) == 1)
+        {
+            star_2_img.gameObject.SetActive(true);
+            star_2_empty.gameObject.SetActive(false);
+        }
+        if (PlayerPrefs.GetInt(star_3) == 1)
+        {
+            star_3_img.gameObject.SetActive(true);
+            star_3_empty.gameObject.SetActive(false);
+        }
+        if (PlayerPrefs.GetInt(star_4) == 1)
+        {
+            star_4_img.gameObject.SetActive(true);
+            star_4_empty.gameObject.SetActive(false);
+        }
+        if (PlayerPrefs.GetInt(star_5) == 1)
+        {
+            star_5_img.gameObject.SetActive(true);
+            star_5_empty.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!star_1_active && PlayerPrefs.GetInt(star_1) == 1)
-        {
-            star_1_active = true;
-            star_1_img.gameObject.SetActive(true);
-            star_1_empty.gameObject.SetActive(false);
-        }
-        if (!star_2_active && PlayerPrefs.GetInt(star_2) == 1)
-        {
-            star_2_active = true;
-            star_2_img.gameObject.SetActive(true);
-            star_2_empty.gameObject.SetActive(false);
-        }
-        if (!star_3_active && PlayerPrefs.GetInt(star_3) == 1)
-        {
-            star_3_active = true;
-            star_3_img.gameObject.SetActive(true);
-            star_3_empty.gameObject.SetActive(false);
-        }
-        if (!star_4_active && PlayerPrefs.GetInt(star_4) == 1)
-        {
-            star_4_active = true;
-            star_4_img.gameObject.SetActive(true);
-            star_4_empty.gameObject.SetActive(false);
-        }
-        if (!star_5_active && PlayerPrefs.GetInt(star_5) == 1)
-        {
-            star_5_active = true;
-            star_5_img.gameObject.SetActive(true);
-            star_5_empty.gameObject.SetActive(false);
-        }
+
     }
 }
