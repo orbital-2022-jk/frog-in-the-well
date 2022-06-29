@@ -444,16 +444,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd899425727f43546a7de4d5c9fb8047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  star_1_img: {fileID: 837294821}
-  star_2_img: {fileID: 1663841289}
-  star_3_img: {fileID: 1958826073}
-  star_4_img: {fileID: 1555165710}
-  star_5_img: {fileID: 1324588215}
-  star_1_empty: {fileID: 1971077322}
-  star_2_empty: {fileID: 609321262}
-  star_3_empty: {fileID: 1668167634}
-  star_4_empty: {fileID: 897697462}
-  star_5_empty: {fileID: 1635127625}
+  star_img:
+  - {fileID: 837294821}
+  - {fileID: 1663841289}
+  - {fileID: 1958826073}
+  - {fileID: 1555165710}
+  - {fileID: 1324588215}
+  star_empty:
+  - {fileID: 1971077322}
+  - {fileID: 609321262}
+  - {fileID: 1668167634}
+  - {fileID: 897697462}
+  - {fileID: 1635127625}
 --- !u!1 &609321260
 GameObject:
   m_ObjectHideFlags: 0

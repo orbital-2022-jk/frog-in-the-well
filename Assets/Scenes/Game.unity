@@ -14802,16 +14802,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5279e5a490240ea428cb3eaccc812f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  star_1_img: {fileID: 1306807126}
-  star_2_img: {fileID: 584160386}
-  star_3_img: {fileID: 337542854}
-  star_4_img: {fileID: 1040837726}
-  star_5_img: {fileID: 2145266314}
-  star_1_empty: {fileID: 1032458035}
-  star_2_empty: {fileID: 2019910485}
-  star_3_empty: {fileID: 1390640306}
-  star_4_empty: {fileID: 878062624}
-  star_5_empty: {fileID: 1512300857}
+  star_img:
+  - {fileID: 1306807126}
+  - {fileID: 584160386}
+  - {fileID: 337542854}
+  - {fileID: 1040837726}
+  - {fileID: 2145266314}
+  star_empty:
+  - {fileID: 1032458035}
+  - {fileID: 2019910485}
+  - {fileID: 1390640306}
+  - {fileID: 878062624}
+  - {fileID: 1512300857}
 --- !u!1001 &821582922
 PrefabInstance:
   m_ObjectHideFlags: 0
