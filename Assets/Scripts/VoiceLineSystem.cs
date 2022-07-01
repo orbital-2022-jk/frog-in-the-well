@@ -8,7 +8,7 @@ public class VoiceLineSystem : MonoBehaviour
 
     public bool is_playing = false;
     public AudioSource[] voice_lines;
-    private int random_voice_line;
+    private int random_voice_line = 0;
 
     // Start is called before the first frame update
     void Start()

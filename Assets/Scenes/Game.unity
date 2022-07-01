@@ -6141,7 +6141,7 @@ GameObject:
   - component: {fileID: 338433736}
   - component: {fileID: 338433735}
   m_Layer: 0
-  m_Name: voice_line_1
+  m_Name: voice_line_trigger_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6175,6 +6175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voice_line: {fileID: 1755617398}
+  voice_line_system: {fileID: 2059346340}
 --- !u!61 &338433736
 BoxCollider2D:
   m_ObjectHideFlags: 0
