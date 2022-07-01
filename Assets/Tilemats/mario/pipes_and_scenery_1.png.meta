@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 160b2df8fbb6bd741b87cb0c89ba7553
+guid: a974e16a7205ff248ad115b7bf031342
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ground_and_stone_1_0
+      name: pipes_and_scenery_1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,20 +124,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55f85ab01aa3ae448a0da318f8d804e4
-      internalID: 2100180919
+      spriteID: 8e90216c032160543b01f7d87abc7471
+      internalID: -229655800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_1
+      name: pipes_and_scenery_1_1
       rect:
         serializedVersion: 2
         x: 17
@@ -145,20 +145,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3653f6a8a03fe54ba8629424666398b
-      internalID: -234929379
+      spriteID: 3282cc21c9e4cfa458e6ef0cce2cc716
+      internalID: 697103294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_2
+      name: pipes_and_scenery_1_2
       rect:
         serializedVersion: 2
         x: 34
@@ -166,20 +166,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecb33d8b7f9bb13418090ebdd9fb0aff
-      internalID: -2124001407
+      spriteID: 6aad1e9f3cad7ad4eb23590cfa5521a2
+      internalID: 1966736292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_3
+      name: pipes_and_scenery_1_3
       rect:
         serializedVersion: 2
         x: 51
@@ -187,20 +187,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91a345db7225bbe4e9f319cd2d9a53ca
-      internalID: 1804655942
+      spriteID: b6d6a838dad652a45b1ad603effc8d0a
+      internalID: 1715806557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_4
+      name: pipes_and_scenery_1_4
       rect:
         serializedVersion: 2
         x: 68
@@ -208,20 +208,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a931d3167e7a6341b913a65da233c62
-      internalID: 2014543174
+      spriteID: f12fd23a229b565409dca616702f8325
+      internalID: 2044620302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_5
+      name: pipes_and_scenery_1_5
       rect:
         serializedVersion: 2
         x: 85
@@ -229,20 +229,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47474883b424b614a9e37414f31d118b
-      internalID: -1454008038
+      spriteID: d11d16d4df2c7cc44a678a86befc7f2d
+      internalID: -791795269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_6
+      name: pipes_and_scenery_1_6
       rect:
         serializedVersion: 2
         x: 102
@@ -250,20 +250,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4918047f2581b604d903e3dc2f720cb4
-      internalID: 1708541717
+      spriteID: a6aa7a2078fd15c4b93264237e8516c9
+      internalID: -687868011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_7
+      name: pipes_and_scenery_1_7
       rect:
         serializedVersion: 2
         x: 119
@@ -271,20 +271,41 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1153f571760fef7499b5e16219f547e8
-      internalID: -1439952002
+      spriteID: ee4c3a1ba64beff45b1fc235b34f04fb
+      internalID: -777303522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_8
+      name: pipes_and_scenery_1_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 51
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a56db579a11e545b62734cd81d7a0f
+      internalID: 990032543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipes_and_scenery_1_9
       rect:
         serializedVersion: 2
         x: 0
@@ -292,20 +313,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5814014c97f456342ab2a3e4a5b7792d
-      internalID: -532364952
+      spriteID: b1ad4ec3b3753a748b6d42ca872b3f4d
+      internalID: 1112138052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_9
+      name: pipes_and_scenery_1_10
       rect:
         serializedVersion: 2
         x: 17
@@ -313,20 +334,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1851ea5e3600b434182c24c9b27eba4c
-      internalID: 994495360
+      spriteID: ac15d6aacefb51e46b37fa76b88ebbd3
+      internalID: 1587583339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_10
+      name: pipes_and_scenery_1_11
       rect:
         serializedVersion: 2
         x: 34
@@ -334,20 +355,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04fe57310ea82d04aab8323952d6ae74
-      internalID: -551812057
+      spriteID: c658f043f8715494eaa69b293fc30f15
+      internalID: 7205974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_11
+      name: pipes_and_scenery_1_12
       rect:
         serializedVersion: 2
         x: 51
@@ -355,20 +376,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6250ea8d2189e434697412103bcb0c3d
-      internalID: -1093996255
+      spriteID: 6d0aba0df6aff664cb2e85f363993b2b
+      internalID: 1843055995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_12
+      name: pipes_and_scenery_1_13
       rect:
         serializedVersion: 2
         x: 68
@@ -376,20 +397,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34c49e26bb45cac46b1a6a473279f3ba
-      internalID: -1850771599
+      spriteID: 409fdadc0e34b0a49a69a11214d19036
+      internalID: -2044138936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_13
+      name: pipes_and_scenery_1_14
       rect:
         serializedVersion: 2
         x: 85
@@ -397,20 +418,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a69789025692584988bdabcf978a3e3
-      internalID: 557987806
+      spriteID: a4aa0b0d1ec29a14d826c761dd607540
+      internalID: -1496861793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_14
+      name: pipes_and_scenery_1_15
       rect:
         serializedVersion: 2
         x: 102
@@ -418,20 +439,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20c724abbf7280240b9b24969010ac34
-      internalID: 1785301040
+      spriteID: 8cd86acd4e9592e4a94d957b7733e41b
+      internalID: -227587463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_15
+      name: pipes_and_scenery_1_16
       rect:
         serializedVersion: 2
         x: 119
@@ -439,20 +460,41 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 595bc42d6a771c749833da4a37738d10
-      internalID: 932526121
+      spriteID: 9a5d23e01a7c5e74fac2dffb1a950dd2
+      internalID: -1737588946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_16
+      name: pipes_and_scenery_1_17
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3337832f0e28c5b4d88de98b9e1a3ccb
+      internalID: -812712153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipes_and_scenery_1_18
       rect:
         serializedVersion: 2
         x: 0
@@ -460,20 +502,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 010ed5e545edb094fa4c42b805a3ce0a
-      internalID: 854275471
+      spriteID: 4e9a8c0caf69d2846bc6e4823a748d92
+      internalID: 1135482883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_17
+      name: pipes_and_scenery_1_19
       rect:
         serializedVersion: 2
         x: 17
@@ -481,20 +523,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b5931daedcca3d4d8b665a6fc4e15e1
-      internalID: 723397702
+      spriteID: 82756f2bce0801341817e0da560b70f6
+      internalID: 1320111092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_18
+      name: pipes_and_scenery_1_20
       rect:
         serializedVersion: 2
         x: 34
@@ -502,20 +544,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f346e7808c80d36439a5146e0e930e65
-      internalID: -1293871908
+      spriteID: 4e36a186df362c141b032a9155e9a97d
+      internalID: 1384429121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_19
+      name: pipes_and_scenery_1_21
       rect:
         serializedVersion: 2
         x: 51
@@ -523,20 +565,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61d8155e5d8f75046950b95ddb6ad4b7
-      internalID: -1204000584
+      spriteID: 02e6dffcc190d0f48954609e6f367eac
+      internalID: 862071026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_20
+      name: pipes_and_scenery_1_22
       rect:
         serializedVersion: 2
         x: 68
@@ -544,20 +586,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d598dcd59680634e9b68df825772e84
-      internalID: -1584740436
+      spriteID: 53a84cb32b069904294ec3a8d055456c
+      internalID: -517410116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_21
+      name: pipes_and_scenery_1_23
       rect:
         serializedVersion: 2
         x: 85
@@ -565,20 +607,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2435cbdafad956247abf624eb8fa7306
-      internalID: -861787435
+      spriteID: 32eca4eaeda5c0347ac51e2a352ef701
+      internalID: -459584727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_22
+      name: pipes_and_scenery_1_24
       rect:
         serializedVersion: 2
         x: 102
@@ -586,20 +628,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba10cb937ab922748965a37bc8714e14
-      internalID: -1677008580
+      spriteID: 6cb5b37e35dd2dd4083ed638c18e73fd
+      internalID: 638183161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_23
+      name: pipes_and_scenery_1_25
       rect:
         serializedVersion: 2
         x: 119
@@ -607,20 +649,41 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 668c8a9c84593ee49bf51df8f604964b
-      internalID: -795464636
+      spriteID: bb0fc61789a4c4f4d90840f4a64e0ef3
+      internalID: 1749402756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_24
+      name: pipes_and_scenery_1_26
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a776a2f4df2504590cbac41028c9f4
+      internalID: 701258828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipes_and_scenery_1_27
       rect:
         serializedVersion: 2
         x: 0
@@ -628,20 +691,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f38fdd18e148c1a4f830de1edfdf00df
-      internalID: -237298445
+      spriteID: 0781e45c42a14d84396de63dc4437fa0
+      internalID: -96571929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_25
+      name: pipes_and_scenery_1_28
       rect:
         serializedVersion: 2
         x: 17
@@ -649,20 +712,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fd4b989370f39c4283ac3560ed4fab1
-      internalID: 1702524292
+      spriteID: 92264d0f2061d0b479810bc768cf9224
+      internalID: 125863946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_26
+      name: pipes_and_scenery_1_29
       rect:
         serializedVersion: 2
         x: 34
@@ -670,20 +733,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24f9bc82639af9c4abe5dae20c9dd58e
-      internalID: 57430478
+      spriteID: 9766d679ebc041f4b931cb897d95c5e4
+      internalID: -1203488861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_27
+      name: pipes_and_scenery_1_30
       rect:
         serializedVersion: 2
         x: 51
@@ -691,20 +754,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b11a238975de176409543e1023d97f01
-      internalID: -1177083094
+      spriteID: f62807e82c915ca40b04f17bb8d970b5
+      internalID: -563302734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_28
+      name: pipes_and_scenery_1_31
       rect:
         serializedVersion: 2
         x: 68
@@ -712,20 +775,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68b934ff93714964099e66822a7ea6cc
-      internalID: -676921603
+      spriteID: 66b396482acf4704c8ca122540b59259
+      internalID: 1404115540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_29
+      name: pipes_and_scenery_1_32
       rect:
         serializedVersion: 2
         x: 85
@@ -733,20 +796,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f06ff8c5ad8a50246a77e9e5daa98b52
-      internalID: -723155030
+      spriteID: a43278cf1900b15479d5547395fb2f17
+      internalID: 1117370105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_30
+      name: pipes_and_scenery_1_33
       rect:
         serializedVersion: 2
         x: 102
@@ -754,20 +817,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 628f49754d71ae04881bab03336effe4
-      internalID: -905950719
+      spriteID: 5a633e39688a8914fa67344fefb1f429
+      internalID: 24426234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_and_stone_1_31
+      name: pipes_and_scenery_1_34
       rect:
         serializedVersion: 2
         x: 119
@@ -775,14 +838,35 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee312fb15367cf74eba6a2bb6a0236e9
-      internalID: -2023833469
+      spriteID: 33b39204832a5db489143b2f38162314
+      internalID: 536845884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipes_and_scenery_1_35
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6aa8a43879f454d8d6d44d73ccbdf7
+      internalID: -909380777
       vertices: []
       indices: 
       edges: []
@@ -798,38 +882,42 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ground_and_stone_1_6: 1708541717
-      ground_and_stone_1_8: -532364952
-      ground_and_stone_1_10: -551812057
-      ground_and_stone_1_18: -1293871908
-      ground_and_stone_1_17: 723397702
-      ground_and_stone_1_12: -1850771599
-      ground_and_stone_1_19: -1204000584
-      ground_and_stone_1_26: 57430478
-      ground_and_stone_1_9: 994495360
-      ground_and_stone_1_13: 557987806
-      ground_and_stone_1_31: -2023833469
-      ground_and_stone_1_14: 1785301040
-      ground_and_stone_1_22: -1677008580
-      ground_and_stone_1_7: -1439952002
-      ground_and_stone_1_15: 932526121
-      ground_and_stone_1_5: -1454008038
-      ground_and_stone_1_16: 854275471
-      ground_and_stone_1_23: -795464636
-      ground_and_stone_1_25: 1702524292
-      ground_and_stone_1_29: -723155030
-      ground_and_stone_1_0: 2100180919
-      ground_and_stone_1_2: -2124001407
-      ground_and_stone_1_28: -676921603
-      ground_and_stone_1_27: -1177083094
-      ground_and_stone_1_30: -905950719
-      ground_and_stone_1_4: 2014543174
-      ground_and_stone_1_24: -237298445
-      ground_and_stone_1_11: -1093996255
-      ground_and_stone_1_20: -1584740436
-      ground_and_stone_1_21: -861787435
-      ground_and_stone_1_1: -234929379
-      ground_and_stone_1_3: 1804655942
+      pipes_and_scenery_1_21: 862071026
+      pipes_and_scenery_1_27: -96571929
+      pipes_and_scenery_1_19: 1320111092
+      pipes_and_scenery_1_29: -1203488861
+      pipes_and_scenery_1_13: -2044138936
+      pipes_and_scenery_1_35: -909380777
+      pipes_and_scenery_1_5: -791795269
+      pipes_and_scenery_1_6: -687868011
+      pipes_and_scenery_1_1: 697103294
+      pipes_and_scenery_1_4: 2044620302
+      pipes_and_scenery_1_23: -459584727
+      pipes_and_scenery_1_15: -227587463
+      pipes_and_scenery_1_10: 1587583339
+      pipes_and_scenery_1_18: 1135482883
+      pipes_and_scenery_1_30: -563302734
+      pipes_and_scenery_1_9: 1112138052
+      pipes_and_scenery_1_33: 24426234
+      pipes_and_scenery_1_28: 125863946
+      pipes_and_scenery_1_25: 1749402756
+      pipes_and_scenery_1_20: 1384429121
+      pipes_and_scenery_1_32: 1117370105
+      pipes_and_scenery_1_17: -812712153
+      pipes_and_scenery_1_7: -777303522
+      pipes_and_scenery_1_22: -517410116
+      pipes_and_scenery_1_24: 638183161
+      pipes_and_scenery_1_26: 701258828
+      pipes_and_scenery_1_34: 536845884
+      pipes_and_scenery_1_31: 1404115540
+      pipes_and_scenery_1_14: -1496861793
+      pipes_and_scenery_1_12: 1843055995
+      pipes_and_scenery_1_11: 7205974
+      pipes_and_scenery_1_3: 1715806557
+      pipes_and_scenery_1_8: 990032543
+      pipes_and_scenery_1_0: -229655800
+      pipes_and_scenery_1_2: 1966736292
+      pipes_and_scenery_1_16: -1737588946
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

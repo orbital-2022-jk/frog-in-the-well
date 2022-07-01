@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 131002124987889410}
   - component: {fileID: 3819384995933802700}
   m_Layer: 0
-  m_Name: mine
+  m_Name: minesweeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
