@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraLerpToTransform : MonoBehaviour
 {
-    // 1
     public Transform camTarget;
     public float trackingSpeed;
     public float minX;
@@ -12,35 +9,24 @@ public class CameraLerpToTransform : MonoBehaviour
     public float maxX;
     public float maxY;
 
-    // 2
     void FixedUpdate()
     {
-        // 3
+        // find camera target
         if (camTarget != null)
         {
-            // 4
+            // lerp to new position of target
             var newPos = Vector2.Lerp(
                 transform.position,
                 camTarget.position,
                 Time.deltaTime * trackingSpeed
             );
+
+            // set new position of camera within bounds
             var camPosition = new Vector3(newPos.x, newPos.y, -10f);
             var v3 = camPosition;
             var clampX = Mathf.Clamp(v3.x, minX, maxX);
             var clampY = Mathf.Clamp(v3.y, minY, maxY);
             transform.position = new Vector3(clampX, clampY, -10f);
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

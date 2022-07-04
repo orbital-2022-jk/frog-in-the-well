@@ -15,10 +15,12 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // check for first instance
         firstPlayInt = PlayerPrefs.GetInt(FirstPlay);
 
         if (firstPlayInt == 0)
         {
+            // set pre-determined volume level for background and sound effects
             backgroundFloat = .5f;
             soundEffectsFloat = .5f;
             backgroundSlider.value = backgroundFloat;
@@ -29,21 +31,25 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
+            // use previous volume level for background and sound effects
             backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
             backgroundSlider.value = backgroundFloat;
             soundEffectsFloat = PlayerPrefs.GetFloat(SoundEffectsPref);
             soundEffectsSlider.value = soundEffectsFloat;
         }
 
+        // update the volume level
         UpdateSound();
     }
 
+    // update the volume level for background and sound effects
     public void SaveSoundSettings()
     {
         PlayerPrefs.SetFloat(BackgroundPref, backgroundSlider.value);
         PlayerPrefs.SetFloat(SoundEffectsPref, soundEffectsSlider.value);
     }
 
+    // update volume for background audio and sound effects audio
     public void UpdateSound()
     {
         backgroundAudio.volume = backgroundSlider.value;
@@ -54,6 +60,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    // save sound settings when not in focus
     void OnApplicationFocus(bool inFocus)
     {
         if (!inFocus)

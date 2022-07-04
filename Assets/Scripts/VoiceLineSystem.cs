@@ -19,9 +19,12 @@ public class VoiceLineSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if fall more than 20 blocks
         if (!is_playing && rb.velocity.y <= -40)
         {
             is_playing = true;
+
+            // generate random voice line
             random_voice_line = Random.Range(0, voice_lines.Length);
             voice_lines[random_voice_line].Play();
 

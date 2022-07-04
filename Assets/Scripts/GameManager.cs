@@ -13,10 +13,12 @@ public class GameManager : MonoBehaviour
         {
             game_over = true;
 
+            // load game over scene after 1f
             Invoke("GameOver", 1f);
         }
     }
 
+    // load game over scene
     public void GameOver()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

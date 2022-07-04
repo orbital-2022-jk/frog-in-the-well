@@ -9,6 +9,7 @@ public class FinalStars : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // set the appropriate stars to be active
         for (int i = 0; i < 5; i++)
         {
             if (PlayerPrefs.GetInt("star_" + (i + 1).ToString()) == 1)

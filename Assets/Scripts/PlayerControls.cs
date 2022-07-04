@@ -30,6 +30,7 @@ public class PlayerControls : MonoBehaviour
 
     void Pause()
     {
+        // toggle pause status and toggle pause menu
         if (paused)
         {
             Time.timeScale = 0f;
@@ -104,7 +105,7 @@ public class PlayerControls : MonoBehaviour
         width = GetComponent<CircleCollider2D>().bounds.extents.x + 0.1f;
         height = GetComponent<CircleCollider2D>().bounds.extents.y + 0.1f;
 
-        // points
+        // debugging points
         points = new GameObject[num_points];
 
         for (int i = 0; i < num_points; i++)
@@ -120,7 +121,8 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        // check for pause buttons
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             paused = !paused;
             Pause();
@@ -130,11 +132,13 @@ public class PlayerControls : MonoBehaviour
         {
             prev_velocity = rb.velocity;
 
+            // ground check
             if (Input.GetButton("Jump") && isGround())
             {
                 charge += charge_rate;
             }
 
+            // release check
             if ((charge >= 20f || Input.GetButtonUp("Jump")) && isGround())
             {
                 rb.velocity = new Vector2(dir * charge, jump_height * charge);
@@ -144,6 +148,7 @@ public class PlayerControls : MonoBehaviour
                 rb.sharedMaterial = bouncy_material;
             }
 
+            // if player is too close to walls
             if (isLeftWall())
             {
                 dir = 1;
@@ -153,6 +158,7 @@ public class PlayerControls : MonoBehaviour
                 dir = -1;
             }
 
+            // update positions for debugging points
             for (int i = 0; i < num_points; i++)
             {
                 points[i].transform.position = pointPos(i * 0.1f, charge);
@@ -164,6 +170,8 @@ public class PlayerControls : MonoBehaviour
     {
         // return Physics2D.BoxCast(circ_col.bounds.center, circ_col.bounds.size * 0.3f, 0f, Vector2.down, 0.5f, platform);
         // return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, ray_cast_length);
+
+        // three raycast lines to check for ground from different locations of player
         bool left = Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
         bool mid = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, ray_cast_length);
         bool right = Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
@@ -187,6 +195,7 @@ public class PlayerControls : MonoBehaviour
 
     Vector2 pointPos(float t, float charge)
     {
+        // calculate correct position of points
         Vector2 curr_point_pos = (Vector2)transform.position + (new Vector2(dir * charge, jump_height * charge) * t) + 0.5f * rb.gravityScale * Physics2D.gravity * (t * t);
 
         return curr_point_pos;

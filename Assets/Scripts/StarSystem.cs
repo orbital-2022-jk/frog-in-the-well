@@ -12,6 +12,7 @@ public class StarSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // set all stars to be not collected yet
         for (int i = 0; i < 5; i++)
         {
             PlayerPrefs.SetInt("star_" + (i + 1).ToString(), 0);
@@ -22,6 +23,7 @@ public class StarSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // update star status
         for (int i = 0; i < 5; i++)
         {
             if (!star_active[i] && PlayerPrefs.GetInt("star_" + (i + 1).ToString()) == 1)
