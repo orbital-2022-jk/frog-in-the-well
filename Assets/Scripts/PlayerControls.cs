@@ -74,11 +74,13 @@ public class PlayerControls : MonoBehaviour
             // contact left
             if (col_x + collision_threshold < curr_x)
             {
+                Debug.Log("contact left");
                 dir = 1;
             }
             // contact right
             else if (col_x - collision_threshold > curr_x)
             {
+                Debug.Log("contact right");
                 dir = -1;
             }
 
@@ -87,12 +89,15 @@ public class PlayerControls : MonoBehaviour
             // // rb.velocity = 0.8f * direction * Mathf.Max(speed, 0f);
         }
 
+        // if player is too close to walls
         if (isLeftWall())
         {
+            Debug.Log("left wall");
             dir = 1;
         }
         else if (isRightWall())
         {
+            Debug.Log("right wall");
             dir = -1;
         }
     }
@@ -146,16 +151,6 @@ public class PlayerControls : MonoBehaviour
                 charge = 1.0f;
 
                 rb.sharedMaterial = bouncy_material;
-            }
-
-            // if player is too close to walls
-            if (isLeftWall())
-            {
-                dir = 1;
-            }
-            else if (isRightWall())
-            {
-                dir = -1;
             }
 
             // update positions for debugging points
