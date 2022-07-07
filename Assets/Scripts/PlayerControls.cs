@@ -28,6 +28,8 @@ public class PlayerControls : MonoBehaviour
     public GameObject[] points;
     public int num_points;
 
+    public Animator animator;
+
     void Pause()
     {
         // toggle pause status and toggle pause menu
@@ -94,7 +96,7 @@ public class PlayerControls : MonoBehaviour
         {
             Debug.Log("left wall");
             dir = 1;
-        }
+       }
         else if (isRightWall())
         {
             Debug.Log("right wall");
@@ -141,6 +143,8 @@ public class PlayerControls : MonoBehaviour
             if (Input.GetButton("Jump") && isGround())
             {
                 charge += charge_rate;
+
+                animator.SetBool("space_pressed", true);
             }
 
             // release check
@@ -151,6 +155,8 @@ public class PlayerControls : MonoBehaviour
                 charge = 1.0f;
 
                 rb.sharedMaterial = bouncy_material;
+
+                animator.SetBool("space_pressed", false);
             }
 
             // update positions for debugging points
@@ -158,6 +164,28 @@ public class PlayerControls : MonoBehaviour
             {
                 points[i].transform.position = pointPos(i * 0.1f, charge);
             }
+        }
+
+        if (isGround())
+        {
+            animator.SetBool("is_grounded", true);
+        }
+        else
+        {
+            animator.SetBool("is_grounded", false);
+        }
+
+        if (dir == 1)
+        {
+            transform.localScale = new Vector2(1, transform.localScale.y);
+        }
+        else if (dir == -1)
+        {
+            transform.localScale = new Vector2(-1, transform.localScale.y);
+        }
+        else 
+        {
+            transform.localScale = new Vector2(1, transform.localScale.y);
         }
     }
 
