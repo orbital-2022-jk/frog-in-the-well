@@ -143,7 +143,7 @@ public class PlayerControls : MonoBehaviour
             // ground check
             if (Input.GetButton("Jump") && isGround())
             {
-                charge += charge_rate;
+                charge += charge_rate * Time.deltaTime;
 
                 animator.SetBool("space_pressed", true);
             }
