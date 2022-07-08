@@ -10,10 +10,11 @@ public class PlayerControls : MonoBehaviour
     Vector2 prev_velocity;
     private float width;
     private float height;
-    private float ray_cast_length = 0.3f;
+    private float ray_cast_length = 0.1f;
     private float collision_threshold = 0.3f;
 
-    public PhysicsMaterial2D bouncy_material, normal_material;
+    public PhysicsMaterial2D bouncy_material,
+        normal_material;
     public float dir;
     public float charge;
     public float charge_rate;
@@ -96,7 +97,7 @@ public class PlayerControls : MonoBehaviour
         {
             Debug.Log("left wall");
             dir = 1;
-       }
+        }
         else if (isRightWall())
         {
             Debug.Log("right wall");
@@ -183,7 +184,7 @@ public class PlayerControls : MonoBehaviour
         {
             transform.localScale = new Vector2(-1, transform.localScale.y);
         }
-        else 
+        else
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
         }
@@ -195,9 +196,21 @@ public class PlayerControls : MonoBehaviour
         // return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, ray_cast_length);
 
         // three raycast lines to check for ground from different locations of player
-        bool left = Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
-        bool mid = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, ray_cast_length);
-        bool right = Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.2f), transform.position.y - height), Vector2.down, ray_cast_length);
+        bool left = Physics2D.Raycast(
+            new Vector2(transform.position.x - (width - 0.2f), transform.position.y - height),
+            Vector2.down,
+            ray_cast_length
+        );
+        bool mid = Physics2D.Raycast(
+            new Vector2(transform.position.x, transform.position.y - height),
+            Vector2.down,
+            ray_cast_length
+        );
+        bool right = Physics2D.Raycast(
+            new Vector2(transform.position.x + (width - 0.2f), transform.position.y - height),
+            Vector2.down,
+            ray_cast_length
+        );
 
         if (left || mid || right)
         {
@@ -208,18 +221,29 @@ public class PlayerControls : MonoBehaviour
 
     private bool isLeftWall()
     {
-        return Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.05f), transform.position.y), Vector2.left, ray_cast_length);
+        return Physics2D.Raycast(
+            new Vector2(transform.position.x - (width - 0.05f), transform.position.y),
+            Vector2.left,
+            ray_cast_length
+        );
     }
 
     private bool isRightWall()
     {
-        return Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.05f), transform.position.y), Vector2.right, ray_cast_length);
+        return Physics2D.Raycast(
+            new Vector2(transform.position.x + (width - 0.05f), transform.position.y),
+            Vector2.right,
+            ray_cast_length
+        );
     }
 
     Vector2 pointPos(float t, float charge)
     {
         // calculate correct position of points
-        Vector2 curr_point_pos = (Vector2)transform.position + (new Vector2(dir * charge, jump_height * charge) * t) + 0.5f * rb.gravityScale * Physics2D.gravity * (t * t);
+        Vector2 curr_point_pos =
+            (Vector2)transform.position
+            + (new Vector2(dir * charge, jump_height * charge) * t)
+            + 0.5f * rb.gravityScale * Physics2D.gravity * (t * t);
 
         return curr_point_pos;
     }
