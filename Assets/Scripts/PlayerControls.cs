@@ -167,6 +167,8 @@ public class PlayerControls : MonoBehaviour
             }
         }
 
+        animator.SetFloat("yVelocity", rb.velocity.y);
+
         if (isGround())
         {
             animator.SetBool("is_grounded", true);
