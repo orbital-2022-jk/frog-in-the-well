@@ -798,7 +798,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ground_and_stone_3_4: -959194325
+      ground_and_stone_3_10: 14688186
       ground_and_stone_3_27: -302140603
       ground_and_stone_3_8: -761941068
       ground_and_stone_3_0: -709103052
@@ -827,8 +827,8 @@ TextureImporter:
       ground_and_stone_3_1: -2145962602
       ground_and_stone_3_7: 1577218518
       ground_and_stone_3_13: 1605271527
-      ground_and_stone_3_10: 14688186
       ground_and_stone_3_25: 553049155
+      ground_and_stone_3_4: -959194325
       ground_and_stone_3_28: -1655119017
   spritePackingTag: 
   pSDRemoveMatte: 0

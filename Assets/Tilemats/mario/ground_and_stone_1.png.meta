@@ -816,7 +816,7 @@ TextureImporter:
       ground_and_stone_1_5: -1454008038
       ground_and_stone_1_16: 854275471
       ground_and_stone_1_23: -795464636
-      ground_and_stone_1_25: 1702524292
+      ground_and_stone_1_1: -234929379
       ground_and_stone_1_29: -723155030
       ground_and_stone_1_0: 2100180919
       ground_and_stone_1_2: -2124001407
@@ -828,8 +828,8 @@ TextureImporter:
       ground_and_stone_1_11: -1093996255
       ground_and_stone_1_20: -1584740436
       ground_and_stone_1_21: -861787435
-      ground_and_stone_1_1: -234929379
       ground_and_stone_1_3: 1804655942
+      ground_and_stone_1_25: 1702524292
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
