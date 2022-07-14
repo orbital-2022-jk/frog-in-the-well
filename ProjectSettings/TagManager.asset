@@ -8,6 +8,7 @@ TagManager:
   - wall
   - ceiling
   - star
+  - bomb
   layers:
   - Default
   - TransparentFX
