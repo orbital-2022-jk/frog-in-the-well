@@ -49,9 +49,11 @@ public class PlayerControls : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "bomb" && !collision.collider.GetComponent<Knockback>().has_exploded)
+        if (
+            collision.collider.tag == "bomb"
+            && !collision.collider.GetComponent<Knockback>().has_exploded
+        )
         {
-            collision.collider.GetComponent<Knockback>().has_exploded = true;
             return;
         }
 
