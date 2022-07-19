@@ -350,10 +350,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_14
       rect:
         serializedVersion: 2
-        x: 859
-        y: 982
-        width: 33
-        height: 33
+        x: 858
+        y: 981
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -602,10 +602,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_30
       rect:
         serializedVersion: 2
-        x: 859
-        y: 932
-        width: 30
-        height: 33
+        x: 858
+        y: 931
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -833,10 +833,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_45
       rect:
         serializedVersion: 2
-        x: 859
-        y: 882
-        width: 23
-        height: 33
+        x: 858
+        y: 881
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1085,10 +1085,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_61
       rect:
         serializedVersion: 2
-        x: 858
-        y: 832
-        width: 33
-        height: 33
+        x: 857
+        y: 831
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1337,10 +1337,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_77
       rect:
         serializedVersion: 2
-        x: 858
-        y: 785
-        width: 33
-        height: 30
+        x: 857
+        y: 781
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1610,10 +1610,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_95
       rect:
         serializedVersion: 2
-        x: 858
-        y: 742
-        width: 33
-        height: 23
+        x: 857
+        y: 731
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1967,10 +1967,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_118
       rect:
         serializedVersion: 2
-        x: 858
-        y: 682
-        width: 33
-        height: 33
+        x: 857
+        y: 681
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2219,10 +2219,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_135
       rect:
         serializedVersion: 2
-        x: 861
-        y: 632
-        width: 30
-        height: 33
+        x: 857
+        y: 631
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2387,10 +2387,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_144
       rect:
         serializedVersion: 2
-        x: 868
-        y: 582
-        width: 23
-        height: 33
+        x: 857
+        y: 581
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2576,10 +2576,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_153
       rect:
         serializedVersion: 2
-        x: 859
-        y: 533
-        width: 33
-        height: 33
+        x: 858
+        y: 532
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2702,10 +2702,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_160
       rect:
         serializedVersion: 2
-        x: 859
-        y: 483
-        width: 33
-        height: 30
+        x: 858
+        y: 482
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2849,10 +2849,10 @@ TextureImporter:
       name: PC Computer - Pac-Man Championship Edition DX - Classic_172
       rect:
         serializedVersion: 2
-        x: 859
-        y: 433
-        width: 33
-        height: 23
+        x: 858
+        y: 432
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3631,7 +3631,7 @@ TextureImporter:
         width: 20
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3652,7 +3652,7 @@ TextureImporter:
         width: 23
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

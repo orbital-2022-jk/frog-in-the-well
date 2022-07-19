@@ -5,15 +5,9 @@ using UnityEngine;
 public class PacManMovement : MonoBehaviour
 {
     public Vector3[] points; // In the editor, put your rectangle coordinates in here
-    private SpriteRenderer sr;
-    public Sprite[] sprites;
+    public Animator animator;
     public float movement_speed;
     private int nextPointIndex = 0;
-
-    void Start()
-    {
-        sr = GetComponent<SpriteRenderer>();
-    }
 
     void Update()
     {
@@ -26,7 +20,8 @@ public class PacManMovement : MonoBehaviour
             {
                 nextPointIndex = 0;
             }
-            sr.sprite = sprites[nextPointIndex];
+
+            animator.SetInteger("index", nextPointIndex);
         }
 
         transform.position = Vector3.MoveTowards(
