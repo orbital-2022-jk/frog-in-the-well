@@ -133,6 +133,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4645269907814660288, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.99375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479482815683924150, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1956104647, guid: 90e8cd49464455440921a25b58d23d59, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
 --- !u!4 &2871114595265779322 stripped
@@ -140,6 +148,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 757426474255517784, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
   m_PrefabInstance: {fileID: 3268158532733345314}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3990387832897140650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1889928861138053512, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
+  m_PrefabInstance: {fileID: 3268158532733345314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1124898188827345728
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3990387832897140650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2312e506053666b48b9a77d736421075, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5828133057652229830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -199,6 +232,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5479482815683924150, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2060199348, guid: 90e8cd49464455440921a25b58d23d59, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86a36439ca84cf04f9d375844d36385c, type: 3}
 --- !u!4 &6513150085388865182 stripped
