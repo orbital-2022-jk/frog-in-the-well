@@ -19,6 +19,8 @@ public class Knockback : MonoBehaviour
 
             rb.AddForce(new_direction * knockback_strength, ForceMode2D.Impulse);
 
+            FindObjectOfType<AudioManager>().Play("explosion");
+
             Invoke("complete_knockback", 0.1f);
         }
     }
