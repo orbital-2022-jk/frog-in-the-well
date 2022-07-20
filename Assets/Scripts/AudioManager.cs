@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
@@ -7,8 +8,10 @@ public class AudioManager : MonoBehaviour
     private static readonly string BackgroundPref = "BackgroundPref";
     private static readonly string SoundEffectsPref = "SoundsEffectsPref";
     private int firstPlayInt;
-    public Slider backgroundSlider, soundEffectsSlider;
-    private float backgroundFloat, soundEffectsFloat;
+    public Slider backgroundSlider,
+        soundEffectsSlider;
+    private float backgroundFloat,
+        soundEffectsFloat;
     public AudioSource backgroundAudio;
     public AudioSource[] soundEffectsAudio;
 
@@ -67,5 +70,11 @@ public class AudioManager : MonoBehaviour
         {
             SaveSoundSettings();
         }
+    }
+
+    public void Play(string name)
+    {
+        AudioSource s = Array.Find(soundEffectsAudio, sound => sound.name == name);
+        s.Play();
     }
 }

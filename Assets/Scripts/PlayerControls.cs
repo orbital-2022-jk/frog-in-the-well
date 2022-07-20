@@ -31,6 +31,8 @@ public class PlayerControls : MonoBehaviour
 
     public Animator animator;
 
+    private bool has_jumped;
+
     void Pause()
     {
         // toggle pause status and toggle pause menu
@@ -166,6 +168,10 @@ public class PlayerControls : MonoBehaviour
                 rb.sharedMaterial = bouncy_material;
 
                 animator.SetBool("space_pressed", false);
+
+                Invoke("jumped", 0.1f);
+
+                FindObjectOfType<AudioManager>().Play("player_jump");
             }
 
             // update positions for debugging points
@@ -173,31 +179,43 @@ public class PlayerControls : MonoBehaviour
             {
                 points[i].transform.position = pointPos(i * 0.1f, charge);
             }
-        }
 
-        animator.SetFloat("yVelocity", rb.velocity.y);
+            animator.SetFloat("yVelocity", rb.velocity.y);
 
-        if (isGround())
-        {
-            animator.SetBool("is_grounded", true);
-        }
-        else
-        {
-            animator.SetBool("is_grounded", false);
-        }
+            if (isGround())
+            {
+                animator.SetBool("is_grounded", true);
 
-        if (dir == 1)
-        {
-            transform.localScale = new Vector2(1, transform.localScale.y);
+                if (has_jumped)
+                {
+                    FindObjectOfType<AudioManager>().Play("player_land");
+
+                    has_jumped = false;
+                }
+            }
+            else
+            {
+                animator.SetBool("is_grounded", false);
+            }
+
+            if (dir == 1)
+            {
+                transform.localScale = new Vector2(1, transform.localScale.y);
+            }
+            else if (dir == -1)
+            {
+                transform.localScale = new Vector2(-1, transform.localScale.y);
+            }
+            else
+            {
+                transform.localScale = new Vector2(1, transform.localScale.y);
+            }
         }
-        else if (dir == -1)
-        {
-            transform.localScale = new Vector2(-1, transform.localScale.y);
-        }
-        else
-        {
-            transform.localScale = new Vector2(1, transform.localScale.y);
-        }
+    }
+
+    private void jumped()
+    {
+        has_jumped = true;
     }
 
     private bool isGround()
