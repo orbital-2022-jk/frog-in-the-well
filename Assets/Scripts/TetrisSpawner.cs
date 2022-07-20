@@ -12,7 +12,7 @@ public class TetrisSpawner : MonoBehaviour
     public float fall_speed;
     private float x,
         y;
-    private float tetris_min_y = 40.0f;
+    private float tetris_min_y = 41.0f;
     private int random_tetromino;
 
     // Start is called before the first frame update
