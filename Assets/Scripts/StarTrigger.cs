@@ -7,8 +7,11 @@ public class StarTrigger : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("star_collected");
+
             // star collected
             PlayerPrefs.SetInt(this.name.ToString(), 1);
+
             Destroy(this.gameObject);
         }
     }
