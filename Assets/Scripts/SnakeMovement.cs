@@ -20,6 +20,7 @@ public class SnakeMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // initialise state of snake
         active = new bool[snake_body.Length];
         head_ptr = length - 1;
         tail_ptr = 0;
@@ -35,16 +36,19 @@ public class SnakeMovement : MonoBehaviour
     {
         curr_movement += Time.deltaTime;
 
+        // update snake position
         if (curr_movement >= movement_speed)
         {
             head_ptr += 1;
             tail_ptr += 1;
 
+            // handle circular array
             if (head_ptr == snake_body.Length)
             {
                 head_ptr = 0;
             }
 
+            // handle circular array
             if (tail_ptr == snake_body.Length)
             {
                 tail_ptr = 0;
@@ -66,6 +70,7 @@ public class SnakeMovement : MonoBehaviour
         update_tail_sprite();
     }
 
+    // update active state of snake parts
     void update_active()
     {
         if (head_ptr > tail_ptr)
@@ -105,6 +110,7 @@ public class SnakeMovement : MonoBehaviour
         }
     }
 
+    // set snake parts to be active
     void update_snake()
     {
         for (int i = 0; i < snake_body.Length; i++)
@@ -120,6 +126,7 @@ public class SnakeMovement : MonoBehaviour
         }
     }
 
+    // update snake straight body sprites
     void update_body_sprite()
     {
         for (int i = 0; i < snake_body.Length; i++)
@@ -138,6 +145,7 @@ public class SnakeMovement : MonoBehaviour
         }
     }
 
+    // update snake curved body sprites
     void update_curve_sprite()
     {
         for (int i = 0; i < snake_body.Length; i++)
@@ -164,6 +172,7 @@ public class SnakeMovement : MonoBehaviour
         }
     }
 
+    // update snake head sprite
     void update_head_sprite()
     {
         if (head_ptr == 0)
@@ -236,6 +245,7 @@ public class SnakeMovement : MonoBehaviour
         }
     }
 
+    // update snake tail sprite
     void update_tail_sprite()
     {
         if (tail_ptr >= 0 && tail_ptr <= 11)

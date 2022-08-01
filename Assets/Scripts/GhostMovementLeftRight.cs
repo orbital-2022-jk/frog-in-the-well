@@ -25,15 +25,22 @@ public class GhostMovementLeftRight : MonoBehaviour
     {
         if (rb.position.x >= right_x)
         {
+            // update direction
             dir = -1;
+
+            // update sprite
             sr.sprite = left_sprite;
         }
         else if (rb.position.x <= left_x)
         {
+            // update direction
             dir = 1;
+
+            // update sprite
             sr.sprite = right_sprite;
         }
 
+        // move ghost
         transform.position += dir * movement_speed * transform.right * Time.deltaTime;
     }
 }

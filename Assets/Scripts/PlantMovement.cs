@@ -23,23 +23,29 @@ public class PlantMovement : MonoBehaviour
     {
         if (rb.position.y >= top_y)
         {
+            // update direction
             dir = -1;
 
             curr_duration += Time.deltaTime;
 
+            // random plant stall duration
             if (curr_duration >= Random.Range(1.0f, stall_duration))
             {
+                // move plant
                 transform.position += dir * movement_speed * transform.up * Time.deltaTime;
             }
         }
         else if (rb.position.y <= bot_y)
         {
+            // update direction
             dir = 1;
 
             curr_duration += Time.deltaTime;
 
+            // random plant stall duration
             if (curr_duration >= Random.Range(1.0f, stall_duration))
             {
+                // move plant
                 transform.position += dir * movement_speed * transform.up * Time.deltaTime;
             }
         }
@@ -47,6 +53,7 @@ public class PlantMovement : MonoBehaviour
         {
             curr_duration = 0;
 
+            // move plant
             transform.position += dir * movement_speed * transform.up * Time.deltaTime;
         }
     }

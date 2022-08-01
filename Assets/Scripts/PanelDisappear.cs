@@ -10,8 +10,10 @@ public class PanelDisappear : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // ensure that panel is active at start of scene
         panel.SetActive(true);
 
+        // disappear panel after duration
         Invoke("Disappear", active_duration);
     }
 

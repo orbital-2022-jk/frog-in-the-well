@@ -18,8 +18,11 @@ public class TetrisSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // initialise location of tetris spawner
         x = this.transform.position.x;
         y = this.transform.position.y;
+
+        // set random delay duration
         delay = Random.Range(min_delay, max_delay);
     }
 
@@ -30,17 +33,21 @@ public class TetrisSpawner : MonoBehaviour
 
         if (curr_delay >= delay)
         {
+            // select a random tetromino to spawn
             random_tetromino = Random.Range(0, 6);
 
             reset_tetromino(tetrominos[random_tetromino]);
 
             curr_delay = 0;
+
+            // update random delay duration
             delay = Random.Range(min_delay, max_delay);
         }
 
         remove_tetromino();
     }
 
+    // reset tetromino position to tetromino spawner location
     void reset_tetromino(GameObject tetromino)
     {
         tetromino.SetActive(true);
@@ -48,6 +55,7 @@ public class TetrisSpawner : MonoBehaviour
         tetromino.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -fall_speed);
     }
 
+    // remove tetromino when reach minimum y
     void remove_tetromino()
     {
         for (int i = 0; i < tetrominos.Length; i++)

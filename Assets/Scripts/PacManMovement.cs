@@ -11,19 +11,25 @@ public class PacManMovement : MonoBehaviour
 
     void Update()
     {
+        // check if reached next point
         var reachedNextPoint = transform.position == points[nextPointIndex];
 
         if (reachedNextPoint)
         {
+            // update index
             nextPointIndex++;
+
+            // circular index
             if (nextPointIndex >= points.Length)
             {
                 nextPointIndex = 0;
             }
 
+            // update animation
             animator.SetInteger("index", nextPointIndex);
         }
 
+        // move pacman
         transform.position = Vector3.MoveTowards(
             transform.position,
             points[nextPointIndex],

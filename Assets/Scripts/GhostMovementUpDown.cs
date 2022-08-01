@@ -25,15 +25,22 @@ public class GhostMovementUpDown : MonoBehaviour
     {
         if (rb.position.y >= up_y)
         {
+            // update direction
             dir = -1;
+
+            // update sprite
             sr.sprite = down_sprite;
         }
         else if (rb.position.y <= down_y)
         {
+            // update direction
             dir = 1;
+
+            // update sprite
             sr.sprite = up_sprite;
         }
 
+        // move ghost
         transform.position += dir * movement_speed * transform.up * Time.deltaTime;
     }
 }

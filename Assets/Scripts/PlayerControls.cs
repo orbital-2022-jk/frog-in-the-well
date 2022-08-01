@@ -51,6 +51,7 @@ public class PlayerControls : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // fix bug when player interacts with bomb
         if (
             collision.collider.tag == "bomb"
             && !collision.collider.GetComponent<Knockback>().has_exploded
@@ -155,6 +156,7 @@ public class PlayerControls : MonoBehaviour
             {
                 charge += charge_rate * Time.deltaTime;
 
+                // update animation
                 animator.SetBool("space_pressed", true);
             }
 
@@ -167,8 +169,10 @@ public class PlayerControls : MonoBehaviour
 
                 rb.sharedMaterial = bouncy_material;
 
+                // update animation
                 animator.SetBool("space_pressed", false);
 
+                // play sound effect
                 Invoke("jumped", 0.1f);
 
                 FindObjectOfType<AudioManager>().Play("player_jump");
@@ -180,24 +184,30 @@ public class PlayerControls : MonoBehaviour
                 points[i].transform.position = pointPos(i * 0.1f, charge);
             }
 
+            // update animation
             animator.SetFloat("yVelocity", rb.velocity.y);
 
             if (isGround())
             {
+                // update animation
                 animator.SetBool("is_grounded", true);
 
                 if (has_jumped)
                 {
-                    FindObjectOfType<AudioManager>().Play("player_land");
+                    // play sound effect
+                    FindObjectOfType<AudioManager>()
+                        .Play("player_land");
 
                     has_jumped = false;
                 }
             }
             else
             {
+                // update animation
                 animator.SetBool("is_grounded", false);
             }
 
+            // update sprite direction
             if (dir == 1)
             {
                 transform.localScale = new Vector2(1, transform.localScale.y);
@@ -213,6 +223,7 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+    // update status of jump
     private void jumped()
     {
         has_jumped = true;
@@ -247,6 +258,7 @@ public class PlayerControls : MonoBehaviour
         return false;
     }
 
+    // check for wall on left
     private bool isLeftWall()
     {
         return Physics2D.Raycast(
@@ -256,6 +268,7 @@ public class PlayerControls : MonoBehaviour
         );
     }
 
+    // check for wall on right
     private bool isRightWall()
     {
         return Physics2D.Raycast(
@@ -265,6 +278,7 @@ public class PlayerControls : MonoBehaviour
         );
     }
 
+    // update position of points
     Vector2 pointPos(float t, float charge)
     {
         // calculate correct position of points

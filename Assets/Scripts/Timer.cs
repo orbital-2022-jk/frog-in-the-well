@@ -24,6 +24,11 @@ public class Timer : MonoBehaviour
         TimeSpan time_span = TimeSpan.FromSeconds(curr_time);
 
         // update text
-        curr_time_text.text = string.Format("Time: {0:D2}:{1:D2}:{2:D2}", time_span.Hours, time_span.Minutes, time_span.Seconds);
+        curr_time_text.text = string.Format(
+            "Time: {0:D2}:{1:D2}:{2:D2}",
+            time_span.Hours,
+            time_span.Minutes,
+            time_span.Seconds
+        );
     }
 }
