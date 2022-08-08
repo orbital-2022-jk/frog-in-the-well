@@ -179,10 +179,10 @@ public class PlayerControls : MonoBehaviour
             }
 
             // update positions for debugging points
-            for (int i = 0; i < num_points; i++)
-            {
-                points[i].transform.position = pointPos(i * 0.1f, charge);
-            }
+            // for (int i = 0; i < num_points; i++)
+            // {
+            //     points[i].transform.position = pointPos(i * 0.1f, charge);
+            // }
 
             // update animation
             animator.SetFloat("yVelocity", rb.velocity.y);
